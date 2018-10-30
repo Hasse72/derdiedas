@@ -13,8 +13,8 @@
 	$sparqlQuery = '
 	SELECT ?lemma (SAMPLE(?gender) AS ?gender) WITH {
 	  SELECT DISTINCT ?lemma WHERE {
-	    VALUES ?gender { wd:Q499327 wd:Q1775415 wd:Q1775461 }
-	    ?lexeme dct:language wd:Q188;
+	    VALUES ?gender { wd:Q1305037 wd:Q1775461 }
+	    ?lexeme dct:language wd:Q9035;
 	            wikibase:lexicalCategory wd:Q1084;
 	            wdt:P5185 ?gender;
 	            wikibase:lemma ?lemma.
@@ -43,7 +43,7 @@
 	    }
 	    else {
     		//select a random lexeme among the results of the query
-			$random=rand(0, 200);
+			$random=rand(0, 89);
 			$line=0;
 			foreach ($items->results->bindings as $item) {
 				$line++;
@@ -53,17 +53,16 @@
 				}
 			}
 		}
-	//convert Qitem of gender into the article (simple version)
-	switch($item->gender->value) {
-		case "http://www.wikidata.org/entity/Q499327": {$_SESSION["article"]="der";break;}
-		case "http://www.wikidata.org/entity/Q1775415": {$_SESSION["article"]="die";break;}
-		case "http://www.wikidata.org/entity/Q1775461": {$_SESSION["article"]="das";break;}
+//convert Qitem of gender into the article (simple version)
+switch($item->gender->value) {
+case "http://www.wikidata.org/entity/Q1305037": {$_SESSION["article"]="en";break;}
+case "http://www.wikidata.org/entity/Q1775461": {$_SESSION["article"]="et";break;}
 		}
 		
 	$_SESSION["noun"]=$item->lemma->value;
 
 	// Check the answer and give feedback
-	if (isset($_POST['article'])) 
+	if (isset($_POST['article']))
 		{ 
 		$_SESSION["answer"]=$_POST['article'];
 		
