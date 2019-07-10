@@ -45,7 +45,7 @@
 	    }
 	    else {
     		//select a random lexeme among the results of the query
-			$random=rand(0, 89);
+			$random=rand(0, 1089);
 			$line=0;
 			foreach ($items->results->bindings as $item) {
 				$line++;
