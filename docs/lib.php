@@ -29,7 +29,9 @@
 	HAVING(COUNT(?gender) = 1)';
 
 	//get result of the query in json
-	$result = file_get_contents('https://query.wikidata.org/bigdata/namespace/wdq/sparql?format=json&query='.urlencode($sparqlQuery));
+        $result = file_get_contents('https://query.wikidata.org/bigdata/namespace/wdq/sparql?format=json&query='.urlencode($sparqlQuery),
+            false,
+            stream_context_create(array('http' => array('header' => 'User-Agent: EnEt/1.0 (https://tools.wmflabs.org/enet/)'))));
 
 	
 	//parse the query
