@@ -83,10 +83,10 @@
 		  Modified by Finn Årup Nielsen to Danish from
 		  <a href="http://auregann.fr/derdiedas/">the original German version</a>
 		  &mdash;
-		  Modified by Hans Vanmechelen to Swedish from
+		  Modified by Hans Vanmechelen and Peter Jacobs to Swedish from
 		  <a href="https://fnielsen/derdiedas">the modified Danish version</a>
 		  &mdash;
-		  Source of the data: <a href="https://query.wikidata.org/#SELECT%20%3Flemma%20%28SAMPLE%28%3Fgender%29%20AS%20%3Fgender%29%20WITH%20%7B%0A%09%20%20SELECT%20DISTINCT%20%3Flemma%20WHERE%20%7B%0A%09%20%20%20%20VALUES%20%3Fgender%20%7B%20wd%3AQ1305037%20wd%3AQ1775461%20%7D%0A%09%20%20%20%20%3Flexeme%20dct%3Alanguage%20wd%3AQ9035%3B%0A%09%20%20%20%20%20%20%20%20%20%20%20%20wikibase%3AlexicalCategory%20wd%3AQ1084%3B%0A%09%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP5185%20%3Fgender%3B%0A%09%20%20%20%20%20%20%20%20%20%20%20%20wikibase%3Alemma%20%3Flemma.%0A%09%20%20%7D%0A%09%20%20ORDER%20BY%20CONCAT%28MD5%28%3Flemma%29%2C%20STR%28NOW%28%29%29%29%0A%09%7D%20AS%20%25randomLemmas%20WHERE%20%7B%0A%09%20%20INCLUDE%20%25randomLemmas.%0A%09%20%20%3Flexeme%20wikibase%3Alemma%20%3Flemma%3B%0A%09%20%20%20%20%20%20%20%20%20%20wdt%3AP5185%20%3Fgender.%0A%09%7D%0A%09GROUP%20BY%20%3Flemma%0A%09HAVING%28COUNT%28%3Fgender%29%20%3D%201%29">query</a>
+		  Source of the data: <a href="https://query.wikidata.org/#SELECT%20%3Flemma%20%28SAMPLE%28%3Fgender%29%20AS%20%3Fgender%29%20WITH%20%7B%0A%09%20%20SELECT%20DISTINCT%20%3Flemma%20WHERE%20%7B%0A%09%20%20%20%20VALUES%20%3Fgender%20%7B%20wd%3AQ1305037%20wd%3AQ1775461%20%7D%0A%09%20%20%20%20%3Flexeme%20dct%3Alanguage%20wd%3AQ9027%3B%0A%09%20%20%20%20%20%20%20%20%20%20%20%20wikibase%3AlexicalCategory%20wd%3AQ1084%3B%0A%09%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP5185%20%3Fgender%3B%0A%09%20%20%20%20%20%20%20%20%20%20%20%20wikibase%3Alemma%20%3Flemma.%0A%09%20%20%7D%0A%09%20%20ORDER%20BY%20CONCAT%28MD5%28%3Flemma%29%2C%20STR%28NOW%28%29%29%29%0A%09%7D%20AS%20%25randomLemmas%20WHERE%20%7B%0A%09%20%20INCLUDE%20%25randomLemmas.%0A%09%20%20%3Flexeme%20wikibase%3Alemma%20%3Flemma%3B%0A%09%20%20%20%20%20%20%20%20%20%20wdt%3AP5185%20%3Fgender.%0A%09%7D%0A%09GROUP%20BY%20%3Flemma%0A%09HAVING%28COUNT%28%3Fgender%29%20%3D%201%29">query</a>
 		  &mdash;
 		  <a href="https://github.com/fnielsen/derdiedas">Code at Github</a>
 		  &mdash; 
