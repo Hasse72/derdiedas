@@ -14,7 +14,7 @@
 	SELECT ?lemma (SAMPLE(?gender) AS ?gender) WITH {
 	  SELECT DISTINCT ?lemma WHERE {
 	    VALUES ?gender { wd:Q1305037 wd:Q1775461 }
-	    ?lexeme dct:language wd:Q9035;
+	    ?lexeme dct:language wd:Q9027;
 	            wikibase:lexicalCategory wd:Q1084;
 	            wdt:P5185 ?gender;
 	            wikibase:lemma ?lemma.
@@ -31,7 +31,7 @@
 	//get result of the query in json
         $result = file_get_contents('https://query.wikidata.org/bigdata/namespace/wdq/sparql?format=json&query='.urlencode($sparqlQuery),
             false,
-            stream_context_create(array('http' => array('header' => 'User-Agent: EnEt/1.0 (https://tools.wmflabs.org/enet/)'))));
+            stream_context_create(array('http' => array('header' => 'User-Agent: Local Test Hasse EnEtt/1.0 (location to be defined)'))));
 
 	
 	//parse the query
@@ -45,7 +45,7 @@
 	    }
 	    else {
     		//select a random lexeme among the results of the query
-			$random=rand(0, 1089);
+			$random=rand(0, 11312);
 			$line=0;
 			foreach ($items->results->bindings as $item) {
 				$line++;
@@ -58,7 +58,7 @@
 //convert Qitem of gender into the article (simple version)
 switch($item->gender->value) {
 case "http://www.wikidata.org/entity/Q1305037": {$_SESSION["article"]="en";break;}
-case "http://www.wikidata.org/entity/Q1775461": {$_SESSION["article"]="et";break;}
+case "http://www.wikidata.org/entity/Q1775461": {$_SESSION["article"]="ett";break;}
 		}
 		
 	$_SESSION["noun"]=$item->lemma->value;
