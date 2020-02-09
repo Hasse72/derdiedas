@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta name='robots' content=''>
-    <title>EnEt &mdash; Wikidata & Danish articles</title>
+    <title>EnEtt &mdash; Wikidata & Swedish articles</title>
 
     <meta charset="UTF-8">
 
@@ -15,9 +15,9 @@
 
   <body class="">
     <div>
-      <h1><span class="blue">En</span><span class="red">Et</span></h1>
+      <h1><span class="blue">En</span><span class="red">Ett</span></h1>
       
-      <h2>Practice your Danish articles with Wikidata</h2>
+      <h2>Practice your Swedish articles with Wikidata</h2>
 			
     </div>
     
@@ -48,8 +48,8 @@
 		<span class="radio en">
 			<input type="radio" id="en" name="article" value="en" /> <label for="en">en</label>
 		</span>
-		<span class="radio et">
-			<input type="radio" id="et" name="article" value="et" /> <label for="et">et</label>
+		<span class="radio ett">
+			<input type="radio" id="ett" name="article" value="ett" /> <label for="ett">ett</label>
 		</span>
 		<span class="radio idk">
 		<input type="radio" id="idk" name="article" value="idk" checked="checked"/> <label for="idk">I don\'t know</label>
@@ -82,6 +82,9 @@
 		  &mdash;
 		  Modified by Finn Årup Nielsen to Danish from
 		  <a href="http://auregann.fr/derdiedas/">the original German version</a>
+		  &mdash;
+		  Modified by Hans Vanmechelen to Swedish from
+		  <a href="https://fnielsen/derdiedas">the modified Danish version</a>
 		  &mdash;
 		  Source of the data: <a href="https://query.wikidata.org/#SELECT%20%3Flemma%20%28SAMPLE%28%3Fgender%29%20AS%20%3Fgender%29%20WITH%20%7B%0A%09%20%20SELECT%20DISTINCT%20%3Flemma%20WHERE%20%7B%0A%09%20%20%20%20VALUES%20%3Fgender%20%7B%20wd%3AQ1305037%20wd%3AQ1775461%20%7D%0A%09%20%20%20%20%3Flexeme%20dct%3Alanguage%20wd%3AQ9035%3B%0A%09%20%20%20%20%20%20%20%20%20%20%20%20wikibase%3AlexicalCategory%20wd%3AQ1084%3B%0A%09%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP5185%20%3Fgender%3B%0A%09%20%20%20%20%20%20%20%20%20%20%20%20wikibase%3Alemma%20%3Flemma.%0A%09%20%20%7D%0A%09%20%20ORDER%20BY%20CONCAT%28MD5%28%3Flemma%29%2C%20STR%28NOW%28%29%29%29%0A%09%7D%20AS%20%25randomLemmas%20WHERE%20%7B%0A%09%20%20INCLUDE%20%25randomLemmas.%0A%09%20%20%3Flexeme%20wikibase%3Alemma%20%3Flemma%3B%0A%09%20%20%20%20%20%20%20%20%20%20wdt%3AP5185%20%3Fgender.%0A%09%7D%0A%09GROUP%20BY%20%3Flemma%0A%09HAVING%28COUNT%28%3Fgender%29%20%3D%201%29">query</a>
 		  &mdash;
